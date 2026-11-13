@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Games</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #080A0F;
+        }
+
+        nav {
+            height: 80px;
+            background-color: #10141D;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .Logo {
+            color: #00FF88;
+            font-size: 28px;
+        }
+.Logo span{
+    color: white;
+}
+        .links {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #00FF88;
+        }
+
+        .BANNER {
+            width: 100%;
+            height: 500px;
+background-image: url("https://images.openai.com/static-rsc-4/P48BbNS6ApenBSEHKZdn94Q0Ru2WVVxbO1xAillm-Af8qWspcpgUj3iDBJUPKkCJxor2TGTLX_-yrh51EFKOSaH66dxvGWEyPteMzvnf_YwWu9_o2WBQEw0oJlKB8D2qOTGMGYR3r_ycxo_Zfw7mQBhcWN87uKNsw3guyWYrcBbeSEGqrKyqUJKIj2TH1kGF?purpose=fullsize");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .CONTENT {
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .HEADING h1 {
+            color: #FFFFFF;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .HEADING span {
+            color: #00FF88;
+        }
+
+        .INFO p {
+            color: #D0D0D0;
+            font-size: 18px;
+            margin: 15px 0 25px;
+        }
+
+        .CONTENT button {
+            background-color: #00FF88;
+            color: #080A0F;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .CONTENT button:hover {
+            background-color: #FFFFFF;
+        }
+        
+.GAMES {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.GAMES h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.GAMES h1 span {
+    color: #00FF88;
+}
+
+.SUBTITLE {
+    color: #A0A0A0;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.CONTAINER {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+        .CARD {
+            width: 320px;
+            height: 420px;
+            background-color: #10141D;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .CARD img {
+            width: 320px;
+            height: 190px;
+            border-radius: 8px;
+        }
+
+        .CARD h2 {
+            color: white;
+            font-size: 22px;
+        }
+
+        .YEAR {
+            color: #00FF88;
+            font-size: 14px;
+        }
+
+        .INFO {
+            color: #A0A0A0;
+            font-size: 14px;
+        }
+
+        .CARD button {
+            background-color: #00FF88;
+            color: #080A0F;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .CARD button:hover {
+            background-color: white;
+        }
+       
+.CARD:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.25);
+    transition: 0.3s;
+}
+
+.DETAILS {
+    width: 100%;
+    padding: 60px 40px;
+    background-color: #10141D;
+    text-align: center;
+}
+
+.DETAILS-HEADING h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.DETAILS-HEADING span {
+    color: #00FF88;
+}
+
+.GAME-BOX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.GAME-IMAGE img {
+    width: 400px;
+    height: 280px;
+    border-radius: 0px;
+}
+
+.GAME-INFO {
+    width: 550px;
+    padding: 25px;
+    background-color: #080A0F;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.GAME-INFO h2 {
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.GAME-INFO p {
+    color: #A0A0A0;
+    font-size: 16px;
+}
+
+.GAME-INFO p span {
+    color: #00FF88;
+}
+
+.GAME-INFO h3 {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.GAME-INFO .DESCRIPTION {
+    color: #A0A0A0;
+    line-height: 25px;
+}
+
+.GAME-INFO button {
+    background-color: #00FF88;
+    color: #080A0F;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.GAME-INFO:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.25);
+}
+.GAME-INFO button:hover{
+    background-color: whitesmoke;
+}
+.CONTACT h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.CONTACT h1 span {
+    color: #00FF88;
+}
+
+.CONTACT-FORM {
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: #080A0F;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.CONTACT-FORM label {
+    display: block;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.CONTACT-FORM input,
+.CONTACT-FORM textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1C2330;
+    color: #FFFFFF;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.CONTACT-FORM textarea {
+    height: 120px;
+}
+
+.CONTACT-FORM button {
+    background-color: #00FF88;
+    color: #080A0F;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.CONTACT-FORM button:hover {
+    background-color: #FFFFFF;
+}
+.FOOTER {
+    background-color: #10141D;
+    padding: 40px;
+    text-align: center;
+}
+
+.FOOTER h2 {
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+.FOOTER h2 span {
+    color: #00FF88;
+}
+
+.FOOTER-LINKS {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.FOOTER-LINKS a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.FOOTER-LINKS a:hover {
+    color: #00FF88;
+}
+
+.FOOTER p {
+    color: #A0A0A0;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2 class="Logo">My<span>Games</span></h2>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#games">My Games</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <div class="BANNER">
+        <div class="CONTENT">
+
+            <div class="HEADING">
+                <h1>MY WORLD OF <span>GAMING</span></h1>
+            </div>
+
+            <div class="INFO">
+                <p>Explore the games I love. Discover my gaming world.</p>
+            </div>
+
+            <button>EXPLORE GAMES</button>
+
+        </div>
+    </div>
+
+    <section class="GAMES" id="games">
+
+        <h1>MY FAVOURITE <span>GAMES</span></h1>
+
+        <p class="SUBTITLE">
+            THE GAMES THAT DEFINE MY GAMING JOURNEY
+        </p>
+
+        <div class="CONTAINER">
+
+            <div class="CARD GTAV">
+                <img src="https://images.openai.com/static-rsc-4/htEDONMHsOte0KtWh--Lrk1OU8Zy5_aZUFP35jFqLoimRVsLYa-V6_1L_Qee29cnmTQdMK0js8y9z90kYBaZ5PuXiCSZfCP2XLdti3pC_rtFZYjHi6F2HWxTFzMYgcViJTxXi7YRie2cIJWNxod5JaK6Q4txizxc6wn8aK61pbwLBQ3wqe8LRxVVT50YipTq?purpose=fullsize">
+                <h2>GTA V</h2>
+                <p class="YEAR">Release Year: 2013</p>
+                <p class="INFO">Explore Los Santos in an open-world action adventure.</p>
+                <button onclick="showGame('GTA V')">View Details</button>
+            </div>
+
+            <div class="CARD Red">
+                <img src="https://images.openai.com/static-rsc-4/uOJE4JUW5yueJaaw0KHCDyVw1q_WEeLxbN6BtNjTA-1_01Vx3vFW2e7EuJCCidY3HLx13LC7uSnV3_obi9xktSCVU8RzzblujIOrmZzMFYw0VsWMjBuSNJ30FettB1K8DGKZUmqEbsjcchIs9EFThApJlbxq4X9TGbR1Hg85GJMwFu4aExQWaEFsyVXE-JIU?purpose=fullsize">
+                <h2>Red Dead Redemption 2</h2>
+                <p class="YEAR">Release Year: 2018</p>
+                <p class="INFO">Experience an incredible story in the Wild West.</p>
+                <button onclick="showGame('Red Dead Redemption 2')">View Details</button>
+            </div>
+
+           
+<div class="CARD assassins">
+    <img id="assassins" src="https://upload.wikimedia.org/wikipedia/en/2/29/Assassin%27s_Creed_III_Game_Cover.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original">
+    <h2>Assassin's Creed III</h2>
+    <p class="YEAR">Release Year: 2012</p>
+    <p class="INFO">Experience the American Revolution as Connor, a skilled Assassin fighting for freedom.</p>
+    <button onclick="showGame('Assassin\'s Creed III')">View Details</button>
+</div>
+
+
+            <div class="CARD Cod">
+                <img src="https://i.redd.it/4uw5h1w7jm791.jpg">
+                <h2>Call of Duty: Modern Warfare</h2>
+                <p class="YEAR">Release Year: 2012</p>
+                <p class="INFO">Experience an action-packed military campaign.</p>
+                <button onclick="showGame('Call of Duty: Modern Warfare')">View Details</button>
+            </div>
+
+            <div class="CARD Hitman">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-AGnGytkWV064VTEM2gr0R7y7dVuQgQYC9GLmmUmMog&s=10">
+                <h2>Hitman: Absolution</h2>
+                <p class="YEAR">Release Year: 2012</p>
+                <p class="INFO">Play as Agent 47 in a stealth action adventure.</p>
+                <button onclick="showGame('Hitman: Absolution')">View Details</button>
+            </div>
+
+            <div class="CARD FIFA">
+                <img src="https://images.openai.com/static-rsc-4/GFyZofNRF6HNTYX2XSi2MltSc91YRMGkVQZ4NgkJiPy9g-SzHBlcKb-_zfe5K0xSBNjTwICCuaQW1cTFfQ9wJyK5DX4Y1d1Zeb8Rn5bbyi0Dvy3TCjWVa12k2TuqyQ3mUVX54Ckl-mJDIMPOvWjJkcIh4BRgvxMVEyUXHf7PHFeiDOlZgELyVPzB7-RncjZw?purpose=fullsize">
+                <h2>FIFA 18</h2>
+                <p class="YEAR">Release Year: 2017</p>
+                <p class="INFO">Enjoy football with clubs and international teams.</p>
+                <button onclick="showGame('FIFA 18')">View Details</button>
+            </div>
+
+        </div>
+
+    </section>
+<section class="DETAILS" id="details">
+
+    <div class="DETAILS-HEADING">
+        <h1>About <span>Game</span></h1>
+    </div>
+
+    <div class="GAME-BOX">
+
+        <div class="GAME-IMAGE">
+            <img src="https://images.ctfassets.net/h1rqp7q66d54/3yVDlCOrJnXMrb0yS4ea0y/d93ed97030eb7c233384e5a551aeaea7/GTAV_Gen9_MFT_Webstore_Hero_3840x2160_DELIV_opt__1_.jpg" alt="GTA V">
+        </div>
+
+        <div class="GAME-INFO">
+
+            <h2>Grand Theft Auto V</h2>
+
+            <p><span>Release Date:</span> 17 September 2013</p>
+
+            <p><span>Developer:</span> Rockstar North</p>
+
+            <p><span>Publisher:</span> Rockstar Games</p>
+
+            <p><span>Genre:</span> Action-Adventure, Open World</p>
+
+            <p><span>Main Characters:</span> Michael, Franklin, Trevor</p>
+
+            <h3>About The Game</h3>
+
+            <p class="DESCRIPTION">
+                Grand Theft Auto V is an open-world action adventure game.
+                Explore Los Santos, complete exciting missions and experience
+                the stories of three different characters.
+            </p>
+
+            <button>EXPLORE MORE</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </div>
+</section>
+
+<section class="DETAILS" id="details">
+
+    <div class="GAME-BOX">
+
+        <div class="GAME-IMAGE">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjM4ZGQ4MzAtNGJmNC00YTAxLWI3Y2MtYWI1ODNmZGVkZDhiXkEyXkFqcGc@._V1_QL75_UX582_.jpg" alt="GTA V">
+        </div>
+
+       <div class="GAME-INFO">
+    <h2>Call of Duty: Modern Warfare 3</h2>
+
+    <p><span>Release Date:</span> 8 November 2011</p>
+    <p><span>Developer:</span> Infinity Ward, Sledgehammer Games</p>
+    <p><span>Publisher:</span> Activision</p>
+    <p><span>Genre:</span> First-Person Shooter</p>
+    <p><span>Main Characters:</span> Captain Price, Soap MacTavish, Yuri</p>
+
+    <h3>About The Game</h3>
+
+    <p class="DESCRIPTION">
+        Call of Duty: Modern Warfare 3 is the final chapter of the
+        original Modern Warfare trilogy. Follow Task Force 141 as
+        they face a global conflict and attempt to stop Makarov.
+        Experience an exciting campaign, multiplayer and Special Ops.
+    </p>
+
+    <button>EXPLORE MORE</button>
+</div>
+    </div>
+
+</section>
+
+<section class="DETAILS">
+    <div class="GAME-BOX">
+        <div class="GAME-IMAGE">
+            <img src="https://images.launchbox-app.com/e5026add-15cd-420c-af46-50750b2de65d.jpg" alt="Hitman Absolution">
+        </div>
+
+        <div class="GAME-INFO">
+            <h2>Hitman: Absolution</h2>
+            <p><span>Release Date:</span> 20 November 2012</p>
+            <p><span>Developer:</span> IO Interactive</p>
+            <p><span>Publisher:</span> Square Enix</p>
+            <p><span>Genre:</span> Stealth, Action</p>
+            <p><span>Main Character:</span> Agent 47</p>
+
+            <h3>About The Game</h3>
+            <p class="DESCRIPTION">
+                Hitman: Absolution follows Agent 47, a highly skilled
+                professional assassin. Experience a story full of
+                mystery, challenging missions and stealth gameplay.
+            </p>
+
+            <button>EXPLORE MORE</button>
+        </div>
+    </div>
+</section>
+
+<section class="DETAILS">
+    <div class="GAME-BOX">
+        <div class="GAME-IMAGE">
+            <img src="https://wallpapercave.com/wp/KfDILIO.jpg" alt="Assassin's Creed III">
+        </div>
+
+        <div class="GAME-INFO">
+            <h2>Assassin's Creed III</h2>
+            <p><span>Release Date:</span> 30 October 2012</p>
+            <p><span>Developer:</span> Ubisoft Montreal</p>
+            <p><span>Publisher:</span> Ubisoft</p>
+            <p><span>Genre:</span> Action-Adventure, Stealth</p>
+            <p><span>Main Character:</span> Connor Kenway</p>
+
+            <h3>About The Game</h3>
+            <p class="DESCRIPTION">
+                Assassin's Creed III takes place during the American
+                Revolution. Play as Connor Kenway and explore a
+                historical world filled with adventures and missions.
+            </p>
+
+            <button>EXPLORE MORE</button>
+        </div>
+    </div>
+</section>
+
+<section class="DETAILS">
+    <div class="GAME-BOX">
+        <div class="GAME-IMAGE">
+            <img src="https://wallpapercave.com/wp/wp2527203.jpg" alt="FIFA 18">
+        </div>
+
+        <div class="GAME-INFO">
+            <h2>FIFA 18</h2>
+            <p><span>Release Date:</span> 29 September 2017</p>
+            <p><span>Developer:</span> EA Vancouver, EA Romania</p>
+            <p><span>Publisher:</span> EA Sports</p>
+            <p><span>Genre:</span> Sports, Football Simulation</p>
+            <p><span>Cover Star:</span> Cristiano Ronaldo</p>
+
+            <h3>About The Game</h3>
+            <p class="DESCRIPTION">
+                FIFA 18 is a football simulation game featuring
+                realistic gameplay, popular football clubs,
+                international teams and exciting career modes.
+            </p>
+
+            <button>EXPLORE MORE</button>
+        </div>
+    </div>
+</section>
+
+<section class="DETAILS">
+    <div class="GAME-BOX">
+        <div class="GAME-IMAGE">
+            <img src="https://wallpapercave.com/wp/wp3363181.jpg" alt="Red Dead Redemption 2">
+        </div>
+
+        <div class="GAME-INFO">
+            <h2>Red Dead Redemption 2</h2>
+            <p><span>Release Date:</span> 26 October 2018</p>
+            <p><span>Developer:</span> Rockstar Studios</p>
+            <p><span>Publisher:</span> Rockstar Games</p>
+            <p><span>Genre:</span> Action-Adventure, Open World</p>
+            <p><span>Main Character:</span> Arthur Morgan</p>
+
+            <h3>About The Game</h3>
+            <p class="DESCRIPTION">
+                Red Dead Redemption 2 follows Arthur Morgan and
+                the Van der Linde gang in the American Wild West.
+                Explore a massive open world and experience
+                an emotional story.
+            </p>
+
+            <button>EXPLORE MORE</button>
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+<h1>Contact <span>Me</span></h1>
+
+<div class="CONTACT-FORM">
+<form>
+    <label>Name</label>
+    <input type="text" placeholder="Enter Your Name" required>
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter Your Email" required>
+
+    <label>Game</label>
+    <input type="text" placeholder="Enter Your Favourite Game">
+
+    <label>Message</label>
+    <textarea placeholder="Write Your Message" required></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+   
+
+</div>
+
+<footer class="FOOTER">
+
+    <h2>MY <span>GAMES</span></h2>
+
+    <div class="FOOTER-LINKS">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <p>© 2026 MY GAMES. All Rights Reserved.</p>
+
+</footer>
+</body>
+</html>
